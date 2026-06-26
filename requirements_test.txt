@@ -1,4 +1,4 @@
 # Test dependencies. pytest-homeassistant-custom-component pulls a matching
 # Home Assistant plus pytest and pytest-asyncio transitively; pin it to the
 # release that matches the HA version you target.
-pytest-homeassistant-custom-component==0.13.340
+pytest-homeassistant-custom-component==0.13.341
