@@ -39,7 +39,7 @@ async def test_config_flow_creates_entry_with_defaults(hass: HomeAssistant):
         )
 
     assert result["type"] == data_entry_flow.FlowResultType.CREATE_ENTRY
-    assert result["title"] == "Better Presence 2.0"
+    assert result["title"] == "Better Presence 2"
     data = result["data"]
     assert data["tracking"]["just_arrived_time"] == 300
     assert data["tracking"]["home_state"] == "Home"

@@ -1,4 +1,4 @@
-"""Better Presence 2.0 — smarter presence for Home Assistant."""
+"""Better Presence 2 — smarter presence for Home Assistant."""
 
 from __future__ import annotations
 

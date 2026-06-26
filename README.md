@@ -1,4 +1,4 @@
-# Better Presence 2.0
+# Better Presence 2
 
 Smarter presence detection for Home Assistant. Better Presence wraps your existing device trackers in a state machine that adds transition states, configurable timers, and multi-tracker aggregation — eliminating flapping and false triggers in automations.
 
@@ -73,8 +73,8 @@ then
 
 ### Via HACS
 
-1. In HACS → Integrations → Custom repositories → add `https://github.com/corgan2222/better_presence2`
-2. Install **Better Presence 2.0**
+1. In HACS → Integrations → Custom repositories → add `https://github.com/corgan2222/ha-better-presence2`
+2. Install **Better Presence 2**
 3. Restart Home Assistant
 4. **Settings → Integrations → Add Integration** → search **Better Presence**
 

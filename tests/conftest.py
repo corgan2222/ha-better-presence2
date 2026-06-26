@@ -1,4 +1,4 @@
-"""Shared test fixtures for Better Presence 2.0."""
+"""Shared test fixtures for Better Presence 2."""
 
 import asyncio
 

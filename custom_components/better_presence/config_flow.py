@@ -1,4 +1,4 @@
-"""Config Flow and Options Flow for Better Presence 2.0."""
+"""Config Flow and Options Flow for Better Presence 2."""
 
 from __future__ import annotations
 
@@ -113,7 +113,7 @@ class BetterPresenceConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         errors = {}
         if user_input is not None:
             return self.async_create_entry(
-                title="Better Presence 2.0",
+                title="Better Presence 2",
                 data={
                     CONF_TRACKING: user_input,
                     CONF_PERSONS: [],

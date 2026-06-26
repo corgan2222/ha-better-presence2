@@ -2,7 +2,7 @@
   "config": {
     "step": {
       "user": {
-        "title": "Better Presence 2.0 — Global Settings",
+        "title": "Better Presence 2 — Global Settings",
         "data": {
           "just_arrived_time": "Just Arrived duration (seconds)",
           "just_left_time": "Just Left duration (seconds)",

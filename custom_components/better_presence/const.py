@@ -1,4 +1,4 @@
-"""Constants for Better Presence 2.0."""
+"""Constants for Better Presence 2."""
 
 from homeassistant.const import Platform
 

@@ -1,4 +1,4 @@
-"""State machine coordinator for Better Presence 2.0."""
+"""State machine coordinator for Better Presence 2."""
 
 from __future__ import annotations
 

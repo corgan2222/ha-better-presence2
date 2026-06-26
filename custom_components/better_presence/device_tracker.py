@@ -1,4 +1,4 @@
-"""Device tracker entity platform for Better Presence 2.0."""
+"""Device tracker entity platform for Better Presence 2."""
 
 from __future__ import annotations
 
