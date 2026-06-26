@@ -46,11 +46,10 @@ async def setup_integration(hass: HomeAssistant, expected_lingering_timers: bool
         "custom_components.better_presence.async_forward_entry_setups",
         new=AsyncMock(),
     ):
-        from custom_components.better_presence import async_setup_entry
+        await hass.config_entries.async_setup(entry.entry_id)
+        await hass.async_block_till_done()
 
-        await async_setup_entry(hass, entry)
-
-    return hass.data[DOMAIN][entry.entry_id]
+    return entry.runtime_data
 
 
 async def test_simulate_service_registered(hass, setup_integration):

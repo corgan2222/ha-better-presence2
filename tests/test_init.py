@@ -47,7 +47,7 @@ async def test_setup_entry_creates_coordinator(hass, mock_entry):
         result = await async_setup_entry(hass, mock_entry)
 
     assert result is True
-    assert mock_entry.entry_id in hass.data[DOMAIN]
+    assert mock_entry.runtime_data is not None
 
 
 async def test_unload_entry_cleans_up(hass, mock_entry):
@@ -71,14 +71,11 @@ async def test_unload_entry_cleans_up(hass, mock_entry):
         await async_setup_entry(hass, mock_entry)
 
         # Get the coordinator that was created so we can verify cleanup
-        from custom_components.better_presence.const import DOMAIN
-
-        coordinator = hass.data[DOMAIN][mock_entry.entry_id]
+        coordinator = mock_entry.runtime_data
 
         # Patch coordinator's async_unload to track if it was called
         with patch.object(coordinator, "async_unload", new=AsyncMock()) as mock_unload:
             result = await async_unload_entry(hass, mock_entry)
 
     assert result is True
-    assert mock_entry.entry_id not in hass.data.get(DOMAIN, {})
     mock_unload.assert_called_once()
