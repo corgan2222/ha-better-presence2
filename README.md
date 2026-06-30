@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/corgan2222/ha-better-presence2/main/images/header.png" alt="Better Presence 2" />
+</p>
+
 # Better Presence 2
 
 Smarter presence detection for Home Assistant. Better Presence wraps your existing device trackers in a state machine that adds transition states, configurable timers, and multi-tracker aggregation — eliminating flapping and false triggers in automations.
