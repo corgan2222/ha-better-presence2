@@ -63,6 +63,7 @@ class BetterPresenceCoordinator:
         self._update_callbacks: list[Callable] = []
         self._last_known_tracker_states: dict[str, Any] = {}
         self._unavailable_logged: dict[str, bool] = {}
+        self._missing_tracker_logged: set[str] = set()
 
         for person in config.get(CONF_PERSONS, []):
             pid = person[CONF_PERSON_ID]
@@ -297,8 +298,13 @@ class BetterPresenceCoordinator:
         for did in devices:
             s = self.hass.states.get(did)
             if s is None:
-                _LOGGER.warning("Tracker %s not found in HA", did)
+                # Log once per device — trackers are commonly absent during HA
+                # startup before their platform has loaded; avoid per-event spam.
+                if did not in self._missing_tracker_logged:
+                    _LOGGER.warning("Tracker %s not found in HA", did)
+                    self._missing_tracker_logged.add(did)
                 continue
+            self._missing_tracker_logged.discard(did)
             if s.state.lower() in _IGNORED_TRACKER_STATES:
                 cached = self._last_known_tracker_states.get(did)
                 if cached is not None:

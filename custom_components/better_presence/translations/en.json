@@ -78,10 +78,12 @@
       }
     },
     "error": {
-      "person_id_exists": "A person with this ID already exists."
+      "person_id_exists": "A person with this ID already exists.",
+      "no_devices_selected": "Please select at least one device tracker."
     },
     "abort": {
-      "no_persons": "No persons configured yet."
+      "no_persons": "No persons configured yet.",
+      "person_not_found": "That person no longer exists."
     }
   }
 }
