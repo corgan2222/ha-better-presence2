@@ -30,10 +30,10 @@
       },
       "add_person": {
         "title": "Add Person — Step 1: Name",
-        "description": "The **Sensor entity ID** becomes the entity name (e.g. \"thomas_bp2\" creates sensor.better_presence_thomas_bp2). The **Display name** is shown in the UI and automations.",
+        "description": "The **Device_tracker entity ID** becomes the entity name (e.g. \"stefan_bp2\" creates device_tracker.better_presence_stefan_bp2). The **Display name** is shown in the UI and automations.",
         "data": {
-          "id": "Sensor entity ID (e.g. thomas_bp2)",
-          "friendly_name": "Display name (e.g. Thomas)"
+          "id": "Device_tracker entity ID (e.g. stefan_bp2)",
+          "friendly_name": "Display name (e.g. Stefan BP2)"
         }
       },
       "add_person_details": {
@@ -82,7 +82,8 @@
       "no_devices_selected": "Please select at least one device tracker."
     },
     "abort": {
-      "no_persons": "No persons configured yet."
+      "no_persons": "No persons configured yet.",
+      "person_not_found": "That person no longer exists."
     }
   }
 }

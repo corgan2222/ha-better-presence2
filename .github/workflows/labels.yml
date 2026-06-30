@@ -1,6 +1,7 @@
+---
 name: Labels
 
-on:
+"on":
   push:
     branches:
       - main
